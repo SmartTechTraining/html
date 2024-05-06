@@ -1,0 +1,89 @@
+<!-- Responsiveness in website -->
+<!-- 1. meta tag viewport -->
+<!-- 2. Media Queries -->
+<!-- 3. Flex Concept -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @media (max-width: 600px) {
+        body {
+          background-color: lightblue;
+        }
+        h1 {
+          text-align: center;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 819px) {
+        h1 {
+          color: green;
+        }
+        img {
+          width: 50%;
+        }
+      }
+
+      .flex-box-container {
+        /* background-color: lightblue; */
+        display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: space-between; */
+      }
+      .flex-box-children {
+        flex: 1;
+        border: 1px dotted black;
+        text-align: center;
+        background-color: lightgreen;
+      }
+      /* .web-content {
+        background-color: lightcoral;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <h1>Simple Web Page </h1>
+    <div class="web-content">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsumjjj.
+      </p>
+    </div>
+    
+    
+    <picture>
+      <source srcset="/Users/spurge/personal_projects/html/web-page/images/google.png" media="(max-width:600px)">
+      <img src="/Users/spurge/personal_projects/html/web-page/images/nature-2.jpeg" alt="Nature Image" width="100%"><br>
+    </picture>
+
+    <div class="flex-box-container">
+      <div class="flex-box-children">1</div>
+      <div class="flex-box-children">2</div>
+      <div class="flex-box-children">3</div>
+      <div class="flex-box-children">4</div>
+      <div class="flex-box-children">5</div>
+      <div class="flex-box-children">6</div>
+      <div class="flex-box-children">7</div>
+      <div class="flex-box-children">8</div>
+    </div>
+
+    <form action="/mongo.db">
+      <label for="uname">Username:</label><br>
+      <input type="text" id="uname" name="uname" required><br>
+      <label for="upassword">Password:</label><br>
+      <input type="password" id="upassword" name="password" required><br>
+      <input type="radio">captcha<br>
+      <input type="radio">Voice Note<br>
+      <input type="checkbox"> Accept the Terms and Conditions<br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+
+</html>
